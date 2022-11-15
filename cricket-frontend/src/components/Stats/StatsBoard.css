@@ -1,0 +1,14 @@
+.statsPlacer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
+  top: 20%;
+
+  /* -ms-grid-column-align: ; */
+  /* flex-direction: Auto;
+    flex-wrap: wrap;
+    flex:auto;
+    width: auto;
+    height: 12vh;
+    align-items: center; */
+  /* justify-content: center; */
+}

@@ -1,0 +1,51 @@
+version: "3.6"
+
+services:
+  favouriteservice:
+    build: ./favouriteservice/
+    image: georgepreetham/favouriteservice:v1
+    ports:
+    - 9007:9007
+    depends_on:
+      - mysql_db
+    restart: on-failure
+    networks:
+      cricket-network:
+
+  statservice:
+    build: ./statservice/
+    image: georgepreetham/statservice:v1
+    ports:
+      - 9006:9006
+    depends_on:
+      - mysql_db
+    restart: on-failure
+    networks:
+      cricket-network:
+
+  userservice:
+    build: ./userservice/
+    image: georgepreetham/userservice:v1
+    ports:
+      - 9005:9005
+    depends_on:
+      - mysql_db
+    restart: on-failure
+    networks:
+      cricket-network:
+
+  mysql_db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cricketstore
+    networks:
+      cricket-network:
+    restart: on-failure
+    volumes:
+    - data-sql-volume:/var/lib/mysql
+
+networks:
+  cricket-network:
+volumes:
+  data-sql-volume:

@@ -1,0 +1,30 @@
+.hero {
+  background-image: url("../assets/hero_image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-grid {
+  width: 100%;
+}
+
+.hero-heading {
+  color: #fff;
+  font-size: 1.5rem;
+  width: 80%;
+  position: relative;
+  left: 1rem;
+}
+
+.hero-highlight {
+  color: #212121;
+  font-weight: 700;
+  background: #ffb825;
+  border-radius: 5px;
+  padding: 0.2rem;
+}

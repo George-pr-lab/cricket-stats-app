@@ -1,0 +1,6 @@
+com\stackroute\statservice\StatServiceApplication.class
+com\stackroute\statservice\model\StatsPlayer.class
+com\stackroute\statservice\controller\StatsPlayerController.class
+com\stackroute\statservice\service\StatsPlayerService.class
+com\stackroute\statservice\repository\StatsPlayerRepository.class
+com\stackroute\statservice\service\StatsPlayerServiceImpl.class
